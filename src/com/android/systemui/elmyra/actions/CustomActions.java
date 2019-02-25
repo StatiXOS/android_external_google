@@ -8,7 +8,7 @@ import android.os.UserHandle;
 import android.provider.MediaStore;
 import android.provider.Settings;
 
-import com.android.internal.util.aquarios.AquaUtils;
+import com.android.internal.util.du.ActionUtils;
 import com.android.systemui.Dependency;
 import com.android.systemui.assist.AssistManager;
 
@@ -49,25 +49,25 @@ public class CustomActions extends Action {
                 launchCamera(getContext());
                 break;
             case 4: // Flashlight
-                AquaUtils.toggleCameraFlash();
+                ActionUtils.toggleCameraFlash();
                 break;
             case 5: // Clear notifications
-                AquaUtils.clearAllNotifications();
+                ActionUtils.clearAllNotifications();
                 break;
             case 6: // Volume panel
-                AquaUtils.toggleVolumePanel(getContext());
+                ActionUtils.toggleVolumePanel(getContext());
                 break;
             case 7: // Screen off
-                AquaUtils.switchScreenOff(getContext());
+                ActionUtils.switchScreenOff(getContext());
                 break;
             case 8: // Notification panel
-                AquaUtils.toggleNotifications();
+                ActionUtils.toggleNotifications();
                 break;
             case 9: // Screenshot
-                AquaUtils.takeScreenshot(true);
+                ActionUtils.takeScreenshot(true);
                 break;
             case 10: // QS panel
-                AquaUtils.toggleQsPanel();
+                ActionUtils.toggleQsPanel();
                 break;
         }
     }
